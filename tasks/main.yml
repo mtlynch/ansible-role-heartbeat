@@ -10,6 +10,13 @@
     group: "{{ heartbeat_group }}"
     system: yes
 
+- name: install cron
+  ansible.builtin.apt:
+    name: cron
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+
 - name: create a heartbeat cronjob
   ansible.builtin.cron:
     name: "send_heartbeat"
