@@ -13,6 +13,6 @@
 - name: create a heartbeat cronjob
   ansible.builtin.cron:
     name: "send_heartbeat"
-    user: "{{ heartbeat_user }}"
+    user: "{{ heartbeat_system_user }}"
     minute: "*/{{ heartbeat_frequency_minutes }}"
     job: "curl --fail --silent --show-error --retry {{ heartbeat_retries }} {{ heartbeat_url }} > /dev/null"
