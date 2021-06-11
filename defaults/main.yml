@@ -1,0 +1,6 @@
+---
+heartbeat_url: google.com
+heartbeat_retries: 3
+heartbeat_frequency_minutes: 5
+heartbeat_system_user: heartbeat
+heartbeat_group: heartbeat

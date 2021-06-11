@@ -1,0 +1,18 @@
+---
+- name: create heartbeat group
+  ansible.builtin.group:
+    name: "{{ heartbeat_group }}"
+    state: present
+
+- name: create heartbeat user
+  ansible.builtin.user:
+    name: "{{ heartbeat_system_user }}"
+    group: "{{ heartbeat_group }}"
+    system: yes
+
+- name: create a heartbeat cronjob
+  ansible.builtin.cron:
+    name: "send_heartbeat"
+    user: "{{ heartbeat_user }}"
+    minute: "*/{{ heartbeat_frequency_minutes }}"
+    job: "curl --fail --silent --show-error --retry {{ heartbeat_retries }} {{ heartbeat_url }} > /dev/null"
