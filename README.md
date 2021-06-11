@@ -6,6 +6,10 @@
 
 Ansible role for a simple heartbeat server that sends regular heartbeat liveness notifications to a monitoring service such as [Cronhub](https://cronhub.io) or [UptimeRobot](https://uptimerobot.com).
 
+## Dependencies
+
+None
+
 ## License
 
 MIT
