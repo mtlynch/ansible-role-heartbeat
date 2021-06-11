@@ -1,5 +1,7 @@
 # Ansible Role: Heartbeat
 
+
+[![CircleCI](https://circleci.com/gh/mtlynch/ansible-role-heartbeat.svg?style=svg)](https://circleci.com/gh/mtlynch/ansible-role-heartbeat)
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
 
 ## Overview
